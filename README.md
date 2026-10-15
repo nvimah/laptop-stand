@@ -4,12 +4,32 @@ A 3D-printed, foldable, vented laptop stand for a 13–14" laptop, designed to w
 
 > **Status:** design verified in CAD (valid solids, no interference in the deployed pose or during the fold sweep). **Not yet test-printed and not load-tested.** Check the first import in Onshape and the first print before relying on it.
 
+## Renders
+
+![Deployed stand, rear three-quarter view](images/deployed_iso.png)
+
+*Deployed: 20° tilt, vented tray, hinged legs standing in the wide foot boots.*
+
+![Side view showing the 20 degree tilt](images/deployed_side.png)
+
+*Side view: front lip at the left, leg and foot boot at the rear.*
+
+| Folded, three-quarter view | Folded, top view |
+|---|---|
+| ![Folded stand, three-quarter view](images/folded_iso.png) | ![Folded stand, top view](images/folded_top.png) |
+
+![Print layout of all parts](images/print_layout.png)
+
+*Print layout: two tray halves, 2 legs, 2 boots and 3 bow-tie keys, all flat on the bed.*
+
 ## Files
 
 | File | What it is |
 |---|---|
 | `bed_stand_deployed.step` | Stand in use, desk/mattress plane at Z = 0. 11 named solids: 2 tray halves, 3 bow-tie keys, 2 legs, 2 foot boots, 2 M4 bolt stand-ins (for mating and fit checks only; not printed). |
 | `bed_stand_print_layout.step` | The 9 printable parts laid flat and spaced out: 2 tray halves, 3 keys, 2 legs, 2 boots. |
+| `stl/*.stl` | Printable meshes, one per part, already in print orientation (see Printing). |
+| `images/*.png` | Renders used in this README. |
 | `source/bedstand.py` | Parametric model (CadQuery). Edit the parameters at the top. |
 | `source/export.py` | Builds both STEP files from `bedstand.py` (writes to the current folder). |
 
@@ -53,6 +73,17 @@ Parts subtotal: **$50.93**. Tax and shipping: estimated about $10, to be confirm
 - **Settings (suggested):** 0.2 mm layers, 4 walls, 20–25% infill.
 - **Orientation:** as in `bed_stand_print_layout.step`. Tray halves flat (lip up), legs on their side, boots flat with the slot opening up, keys flat. No supports expected.
 - **Quantities:** 1 left half, 1 right half, 3 keys, 2 legs, 2 boots.
+- **Ready-to-slice STL files** (in `stl/`, millimetres):
+
+| File | Qty | Size (mm) |
+|---|---|---|
+| `tray_half_left.stl` | 1 | 150 × 212 × 20 |
+| `tray_half_right.stl` | 1 | 150 × 212 × 20 |
+| `leg_left.stl` | 1 | 12 × 90 × 8 (printed on its side) |
+| `leg_right.stl` | 1 | 12 × 90 × 8 (printed on its side) |
+| `foot_boot_left.stl` | 1 | 56 × 52 × 24 |
+| `foot_boot_right.stl` | 1 | 56 × 52 × 24 |
+| `bowtie_key.stl` | 3 | 24 × 10 × 10 |
 
 ## Assembly
 
